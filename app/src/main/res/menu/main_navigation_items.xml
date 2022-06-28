@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_panel"
+        android:icon="@drawable/ic_baseline_call_to_action_24"
+        android:title="面板" />
+    <item
+        android:id="@+id/action_mouse"
+        android:icon="@drawable/ic_baseline_keyboard_24"
+        android:title="键鼠" />
+    <item
+        android:id="@+id/action_push"
+        android:icon="@drawable/ic_baseline_call_made_24"
+        android:title="推送" />
+</menu>

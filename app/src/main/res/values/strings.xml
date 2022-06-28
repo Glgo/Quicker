@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Quicker</string>
+    <string name="permission_denied_forever_message">您拒绝的某些权限或系统无法应用失败，请手动设置为页面授权，否则该功能无法正常使用！</string>
+    <string name="permission_rationale_message">您已拒绝我们申请授权，请同意授权，否则该功能无法正常使用！</string>
+</resources>

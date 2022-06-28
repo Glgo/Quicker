@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_white_bg_corner"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IP："
+        android:textColor="@color/text_333"
+        android:textSize="@dimen/normal_text_size" />
+
+    <EditText
+        android:id="@+id/et_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_edittext"
+        android:digits="0123456789."
+        android:padding="12dp"
+        android:singleLine="true"
+        tools:text="10.120.162.78" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="端口号："
+        android:textColor="@color/text_333"
+        android:textSize="@dimen/normal_text_size" />
+
+    <EditText
+        android:id="@+id/et_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_edittext"
+        android:inputType="number"
+        android:padding="12dp"
+        android:singleLine="true"
+        tools:text="231" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="验证码："
+        android:textColor="@color/text_333"
+        android:textSize="@dimen/normal_text_size" />
+
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_edittext"
+        android:padding="12dp"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shape_bt_blue_bg_corner"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text_size" />
+</LinearLayout>

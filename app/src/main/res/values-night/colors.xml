@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#ffffffff</color>
+    <color name="white">#ff000000</color>
+    <color name="text_333">#FDFDFD</color>
+    <color name="key_color">#5F78FF</color>
+    <color name="key_color_dark">#2F4FFF</color>
+    <color name="blue">#0d6efd</color>
+    <color name="light_blue">#A10D6EFD</color>
+    <color name="dark_gray">#6c757d</color>
+    <color name="gray">#B6B6B6</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="btnPress">#e4faff</color>
+    <color name="bgGrid">#dcdcdc</color>
+    <color name="gray_panel_bg">#a8a8a8</color>
+</resources>

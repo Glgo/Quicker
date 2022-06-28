@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/bg_btn_block.xml" value="0.2140625" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/ic_backspace.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/ic_baseline_arrow.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/ic_keyboard_voice_black_24dp.xml" value="0.1705" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/ic_launcher_background.xml" value="0.274" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/ic_lock_black_24dp.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/ic_lock_open_black_24dp.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/ic_qrcode_scan.xml" value="0.274" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/ic_upcase.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/selector_bt_bg.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/selector_bt_bg_checked.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/selector_edittext.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/selector_key_checked.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/selector_key_press.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/selector_radio.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/selector_radio_left.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/selector_radio_right.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/selector_radio_text_color.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_bt_bg_corner.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_bt_blue_bg_corner.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_bt_gray_bg_corner.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_key_press.xml" value="0.19947916666666668" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_radio_bg.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_radio_bg_checked.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_radio_bg_corner.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_radio_bg_left.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_radio_bg_left_checked.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_radio_bg_left_unchecked.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_radio_bg_right.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_radio_bg_right_checked.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_scan_line.xml" value="0.2805128205128205" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/drawable/shape_white_bg_corner.xml" value="0.28489583333333335" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/actiivty_scan.xml" value="0.26875" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/activity_login.xml" value="0.3625" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/activity_main.xml" value="0.26875" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/activity_mouse_control.xml" value="0.25" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/activity_push.xml" value="0.26875" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/activity_quicker.xml" value="0.24166666666666667" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/activity_scan.xml" value="0.24166666666666667" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/activity_send_key.xml" value="0.26875" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/dialog_push_setting.xml" value="0.26875" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/dialog_socket_setting.xml" value="0.26875" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/fragment_panel.xml" value="0.26875" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/item_list_panel.xml" value="0.26875" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/item_panel.xml" value="0.26875" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/layout/layout_toolbar.xml" value="0.25416666666666665" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/menu/main_navigation_items.xml" value="0.26875" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2638888888888889" />
+        <entry key="..\:/workspace/android/Quicker/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.28489583333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="org.greenrobot.eventbus.Subscribe" />
+    </list>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_panel_bg"
+        android:keepScreenOn="true"
+        android:orientation="vertical"
+        tools:context=".panel.PanelFragment">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_global"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            app:isGlobal="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+            <TextView
+                android:id="@+id/tv_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingStart="12dp"
+                android:textColor="@color/text_333"
+                android:textSize="14dp"
+                tools:text="Quicker" />
+
+            <net.getquicker.widget.ViewPagerCuePoint
+                android:id="@+id/viewpager_point"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/iv_lock_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_lock_open_black_24dp" />
+        </RelativeLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_context"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            app:isGlobal="false" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/bt_mute"
+                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="3dp"
+                android:paddingStart="20dp"
+                android:scaleType="fitCenter"
+                android:src="@android:drawable/ic_lock_silent_mode" />
+
+            <SeekBar
+                android:id="@+id/seek_volume"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/bt_voice"
+                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_keyboard_voice_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/bt_photo"
+                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_camera_alt_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/bt_pc"
+                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_desktop_windows_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/bt_config"
+                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="3dp"
+                android:paddingEnd="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_settings_black_24dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
