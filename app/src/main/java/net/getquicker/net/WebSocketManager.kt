@@ -3,6 +3,8 @@ package net.getquicker.net
 import com.blankj.utilcode.util.*
 import net.getquicker.bean.ResponseBean
 import net.getquicker.bean.SendMsgBean
+import net.getquicker.hook.InputHelper
+import net.getquicker.hook.edittext.EditTextHook
 import net.getquicker.utils.MessageType
 import net.getquicker.utils.SpUtil
 import okhttp3.*
@@ -37,6 +39,14 @@ class WebSocketManager @Inject constructor() {
                     if (data.isNullOrBlank() || responseBean.messageType != MessageType.push) return
                     ClipboardUtils.copyText(responseBean.data)
                     ToastUtils.showShort("文本已复制：\n${responseBean.data}")
+                    try {
+//                        InputHelper.sendText(responseBean.data)
+//                        EditTextHook.editText?.setText(responseBean.data)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    } catch (e2: java.lang.Error) {
+                        e2.printStackTrace()
+                    }
 //                    val result = ShellUtils.execCmd(data, true)
 //                    LogUtils.e("result:$result")
                 }
