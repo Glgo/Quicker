@@ -8,6 +8,7 @@ import net.getquicker.base.BaseActivity
 import net.getquicker.client.ClientManager
 import net.getquicker.client.ClientService
 import net.getquicker.databinding.ActivityMainBinding
+import net.getquicker.service.WebSocketService
 import net.getquicker.utils.PageNavUtil
 import net.getquicker.utils.PageNavUtil.gotoFragment
 import net.getquicker.utils.PageNavUtil.panelLogin
@@ -15,8 +16,9 @@ import net.getquicker.utils.PageNavUtil.panelLogin
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun ActivityMainBinding.initBinding(savedInstanceState: Bundle?) {
-        BarUtils.setStatusBarLightMode(window,false)
+        BarUtils.setStatusBarLightMode(window, false)
         startService(Intent(this@MainActivity, ClientService::class.java))
+        startService(Intent(this@MainActivity, WebSocketService::class.java))
         PageNavUtil.containerId = R.id.container
         supportFragmentManager.gotoFragment(panelLogin)
         bottomNavigation.setOnItemSelectedListener { menuItem ->
@@ -26,6 +28,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                         if (ClientManager.isConnected()) PageNavUtil.panel else panelLogin
                     supportFragmentManager.gotoFragment(pageName)
                 }
+
                 R.id.action_mouse -> supportFragmentManager.gotoFragment(PageNavUtil.mouse)
                 R.id.action_push -> supportFragmentManager.gotoFragment(PageNavUtil.push)
             }

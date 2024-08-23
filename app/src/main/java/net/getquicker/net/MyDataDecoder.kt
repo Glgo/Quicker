@@ -59,7 +59,7 @@ class MyDataDecoder : CumulativeProtocolDecoder() {
     }
 
     private fun deserializeMsg(msgType: Int, content: String): MessageBase? {
-        LogUtils.json(LogUtils.I, content)
+//        LogUtils.json(LogUtils.I, content)
         val gson = Gson()
         when (msgType) {
             UpdateButtonsMessage.MessageType ->                 // update buttons

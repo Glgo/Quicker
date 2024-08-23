@@ -1,10 +1,19 @@
 package net.getquicker.mouse
 
+import android.R.attr.data
+import android.app.Activity.RESULT_OK
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.lifecycleScope
+import com.blankj.utilcode.util.FileUtils
 import com.blankj.utilcode.util.GsonUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
+import com.blankj.utilcode.util.UriUtils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -24,6 +33,7 @@ import javax.inject.Inject
 import kotlin.math.abs
 import kotlin.math.roundToInt
 
+
 /**
  *  author : Clay
  *  date : 2022/01/04 08:50:56
@@ -34,6 +44,7 @@ class MouseControlFragment : BaseFragment<ActivityMouseControlBinding>() {
     @Inject
     lateinit var webSocketManager: WebSocketManager
     private var webSocket: WebSocket? = null
+    private lateinit var openFileRegister: ActivityResultLauncher<Intent>
 
     //滚轮最小滚动距离
     private val wheelMinSize = 10
@@ -54,6 +65,7 @@ class MouseControlFragment : BaseFragment<ActivityMouseControlBinding>() {
 
             override fun onMessage(webSocket: WebSocket, bytes: ByteString) {
                 //接受二进制数据
+                surfaceView.update(bytes)
 //                val bytesArray = bytes.toByteArray()
 //                val bitmap = BitmapFactory.decodeByteArray(bytesArray, 0, bytesArray.size)
 //                lifecycleScope.launch(Dispatchers.Main) { imageView.loadImage(bitmap) }
@@ -64,7 +76,7 @@ class MouseControlFragment : BaseFragment<ActivityMouseControlBinding>() {
 
             override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
                 ToastUtils.showShort("连接失败")
-                LogUtils.e(t.message)
+                LogUtils.e(t)
                 lifecycleScope.launch(Dispatchers.Main) { showSettingDialog() }
             }
         })
@@ -73,12 +85,15 @@ class MouseControlFragment : BaseFragment<ActivityMouseControlBinding>() {
                 MouseControlView.LEFTCLICK -> {
                     webSocket?.send(GsonUtils.toJson(SendMsgBean("inputscript", "click:left")))
                 }
+
                 MouseControlView.LEFTDOWN -> {
                     webSocket?.send(GsonUtils.toJson(SendMsgBean("inputscript", "down:left")))
                 }
+
                 MouseControlView.LEFTUP -> {
                     webSocket?.send(GsonUtils.toJson(SendMsgBean("inputscript", "up:left")))
                 }
+
                 MouseControlView.MOUSEMOVE -> {
                     webSocket?.send(
                         GsonUtils.toJson(
@@ -88,6 +103,7 @@ class MouseControlFragment : BaseFragment<ActivityMouseControlBinding>() {
                         )
                     )
                 }
+
                 MouseControlView.WHEEL -> {
                     val xInt = x!!.roundToInt()
                     val yInt = y!!.roundToInt()
@@ -108,12 +124,29 @@ class MouseControlFragment : BaseFragment<ActivityMouseControlBinding>() {
                 }
             }
         }
+
+        openFileRegister = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == RESULT_OK) {
+                val uri = result.data?.data
+                val file = UriUtils.uri2File(uri)
+                val bytes = file.readBytes()
+                webSocket?.send(bytes.toString(Charsets.UTF_8))
+            }
+
+        }
+
     }
 
     private fun ActivityMouseControlBinding.initClickListener() {
         ivSetting.singleClick { showSettingDialog() }
         tvBackspace.setOnClickListener {
-            webSocket?.send(GsonUtils.toJson(SendMsgBean("sendkeys", "{BS}")))
+//            webSocket?.send(GsonUtils.toJson(SendMsgBean("sendkeys", "{BS}")))
+            val intent = Intent(Intent.ACTION_GET_CONTENT)
+            intent.setType("*/*");//设置类型，我这里是任意类型，任意后缀的可以这样写。
+            intent.addCategory(Intent.CATEGORY_OPENABLE)
+            openFileRegister.launch(intent)
         }
         tvSpace.setOnClickListener {
             webSocket?.send(GsonUtils.toJson(SendMsgBean("sendkeys", " ")))
